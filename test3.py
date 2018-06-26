@@ -1,3 +1,7 @@
+# coding=utf-8
+# 打印字符串及数字的计算结果
+# 4 % 2取余
+# 浮点型数字出现在运算中结果为浮点型，整形数字的计算中，结果无小数部分
 print "I will now count my chickens:"
 print "Hens", 25 + 30 / 6.0
 print "Roosters", 100 - 25 * 3 % 4.0
