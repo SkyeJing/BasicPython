@@ -1,0 +1,19 @@
+帮助文档：
+python -m pydoc ____(待查模组)
+test14:
+argv输入的参数为字符串，要用%s 或%r格式输出
+print 格式化输出时，参数的%前没有逗号
+print 可以用逗号连接多个参数，逗号起到分隔与连接的作用
+test15:
+解决读取中文文件乱码的问题：
+文件名.read().decode('utf-8')
+异常：
+'utf-8' codec can't decode byte 0xb9 in position 0:invalid start byte
+原因：文件没有使用utf-8编码
+UnicodeDecodeError:'ascii' codec can't decode byte 0xcb in position 0:ordinal not in range(128)
+系统的默认编码格式是ascii
+解决控制台输入中文后，无法正常读取文件的问题：
+line1.decode(sys.getfilesystemencoding()).encode('utf-8')
+sys.getfilesystemencoding()：使用系统方法获取文件系统使用的编码方式
+decode(sys.getfilesystemencoding())以该编码方式解码
+encode('utf-8')使用utf-8方式编码
